@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block titulo_header %}
+{{ object.nome_empresa }}
+{% endblock  %}
+{% block conteudo %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome da Empresa</th>
+            <th>Categoria</th>
+            <th>CNPJ</th>
+            <th>Quitado</th>
+            <th>Stand</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ object.nome_empresa }}</td>
+            <td>{{ object.categoria_empresa }}</td>
+            <td>{{ object.cnpj }}</td>
+            <td>{{ object.quitado }}</td>
+            <td>{{ object.stand }}</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

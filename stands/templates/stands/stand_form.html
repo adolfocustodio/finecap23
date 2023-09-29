@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block titulo_header %}
+Cadastro de Reservas
+{% endblock  %}
+{% block conteudo %}
+<form method="post">
+    {% csrf_token %}
+    <div class="form_item">
+        <p>Localização</p>
+        {{ form.localizacao }}
+    </div>
+    <div class="form_item">
+        <p>Valor</p>
+        {{ form.valor }}
+    </div>
+    <button type="submit" class="btn"><p>Enviar</p></button>
+</form>
+{% endblock %}
